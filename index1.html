@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+ 
+
+<style>
+
+  .fondo{
+  background-color: rgba(175,157,138, 1);
+  }
+  .color-menu{
+  background-color: rgb(55,29,22);
+  }
+  /* cambiar tipo de letra */
+  nav .navbar ul.nav li {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .navbar-nav .nav-link.active,.nav-link,.btn , .navbar-nav .show>.nav-link {
+  color:  #ffffff;
+  }
+  .navbar-toggler-icon{
+  background-image: url(assets/menu.png);
+  }
+  .wave {   
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  }
+
+  .carousel-control-next-icon{
+  background-image: url(assets/right.png);
+  }
+  .carousel-control-prev-icon{
+  background-image: url(assets/left.png);
+  }
+  .bg-parallax{
+  background-image: url(&quot;https://smb4tstrap.com/img/new/slides/026.jpg&quot;);
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:multiply;
+  height: 50%;
+  --bs-bg-opacity: .5;
+  }
+  .svg_wrapper { 
+  width: 100%; 
+  margin-bottom: 30px; 
+  }
+  .wrapper{
+  margin: 250px 0;
+  width: 50%;  
+  }
+  #form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+  }
+  #form p {
+  text-align: center;
+  }
+  #form label {
+  font-size: 20px;
+  }
+  input[type="radio"] {
+  display: none;
+  }
+
+  .clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  }
+  label:hover,
+  label:hover ~ label {
+  color: red;
+  }
+  input[type="radio"]:checked ~ label {
+  color: red;
+  }
+</style>
+
+</head>
+  <body class="fondo">
+<h1>Hello, world!</h1>
+<nav class="navbar navbar-expand-lg .navbar-dark color-menu fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="assets/brand.png" alt="LOGO" width="40" height="30"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>   
+        <li class="nav-item"><a class="nav-link" href="#trescard">Destacados*</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#carouselExampleControls">Otros Platos</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#pedido">Pedidos</a>
+        </li>
+      </ul>
+      <div class="btn-group">
+        <a class="btn btn-default" href="#"><i class="fa fa-facebook" title="Facebook"></i>
+        </a>
+        <a class="btn btn-default" href="#"><i class="fa fa-github" title="Github"></i>
+        </a>
+        <a class="btn btn-default" href="#"><i class="fa fa-whatsapp" title="whatsapp"></i>
+        </a>
+        <a class="btn btn-default" href="#"><i class="fa fa-envelope-o" title="Email"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid mx-auto position-relative fondo" 
+  style="background-image: url(assets/fondo.png);
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  --bs-bg-opacity: 0.5;">
+
+  <div class="card-img-overlay wrapper text-light position-absolute top-0 start-50 ">
+    <h5 class="card-title display-1 text-danger"><img src="assets/brand.png" alt="LOGO" width="133" height="100">RESTAURANTE<a class="navbar-brand" href="#"> </a></h5>
+    <h4 class="text-warning"> Sabemos lo que te gusta.</h4>
+    <h4 class="card-text">Comida como en casa pero sin lavar los platos.</h4>
+  </div>
+
+   <svg class="position-absolute bottom-0 start-0" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 320">
+    <path fill="#AF9D8A" fill-opacity="0.89" d="M0,160L40,144C80,128,160,96,240,101.3C320,107,400,149,480,186.7C560,224,640,256,720,234.7C800,213,880,139,960,144C1040,149,1120,235,1200,272C1280,309,1360,299,1400,293.3L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+</div> 
+
+<div class="container-fluid mx-auto" id="trescard" style="min-height: 100vh;padding-top: 100px;">
+  <h1 class="text-center display-2">Menu Destacados*</h1>
+
+  <div class="row card-group gap-1">
+    <div class="col-sm">
+      <div class="card shadow">
+        <h3 class="card-header">Pastas</h3>
+        <img src="assets/plato1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="row">
+            <form>
+                <span class="clasificacion col p-2 ">
+                  <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                  --><label for="radio1">★</label><!--
+                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                  --><label for="radio2">★</label><!--
+                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                  --><label for="radio3">★</label><!--
+                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                  --><label for="radio4">★</label><!--
+                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                  --><label for="radio5">★</label>
+                  <input class="btn btn-success" type="reset" value="Enviar">
+                </span>
+            </form>
+            
+            <button type="button" class="btn btn-warning position-relative col mt-2">
+              Comentarios
+              <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">mensajes no leídos</span>
+              </span>
+            </button>
+          </div>
+          
+          <p class="card-text">Las mejores pastas caseras, ravioles, raviolones, fideos de todo tipo, como spagueti, moños, tallarines, acompañado de las mejores salsas.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+
+    <div  class="col-sm">
+      <div class="card shadow">
+        <h3 class="card-header">Canelones</h3>
+        <img src="assets/plato5.png" class="card-img-top" alt="...">    
+        <div class="card-body">
+          <div class="row">
+            <form>
+              <span class="clasificacion col p-2 ">
+                <input id="radio6" type="radio" name="estrellas" value="5"><!--
+                --><label for="radio6">★</label><!--
+                --><input id="radio7" type="radio" name="estrellas" value="4"><!--
+                --><label for="radio7">★</label><!--
+                --><input id="radio8" type="radio" name="estrellas" value="3"><!--
+                --><label for="radio8">★</label><!--
+                --><input id="radio9" type="radio" name="estrellas" value="2"><!--
+                --><label for="radio9">★</label><!--
+                --><input id="radio10" type="radio" name="estrellas" value="1"><!--
+                --><label for="radio10">★</label>
+                <input class="btn btn-success" type="reset" value="Enviar">
+              </span>
+            </form>
+            <button type="button" class="btn btn-warning position-relative col mt-2">
+              Comentarios
+              <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                80
+                <span class="visually-hidden">mensajes no leídos</span>
+              </span>
+            </button>
+          </div>
+
+          <p class="card-text">Canelones caseros, como los de la abuela, y 3 tipos de salsa, salsa blanca, rosada y tuco o acompañada con estofado.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+    <div  class="col-sm">
+      <div class="card shadow">      
+        <h3 class="card-header">Matambre</h3>
+        <img src="assets/plato6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <div class="row">
+            <form>
+              <span class="clasificacion col p-2 ">
+                <input id="radio11" type="radio" name="estrellas" value="5"><!--
+                --><label for="radio11">★</label><!--
+                --><input id="radio13" type="radio" name="estrellas" value="4"><!--
+                --><label for="radio13">★</label><!--
+                --><input id="radio14" type="radio" name="estrellas" value="3"><!--
+                --><label for="radio14">★</label><!--
+                --><input id="radio15" type="radio" name="estrellas" value="2"><!--
+                --><label for="radio15">★</label><!--
+                --><input id="radio16" type="radio" name="estrellas" value="1"><!--
+                --><label for="radio16">★</label>
+                <input class="btn btn-success" type="reset" value="Enviar">
+              </span> 
+            </form>
+            <button type="button" class="btn btn-warning position-relative col mt-2">
+              Comentarios
+              <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                75
+                <span class="visually-hidden">mensajes no leídos</span>
+              </span>
+            </button>
+          </div>
+
+          <p class="card-text">Matambres a la pizza, los mejores matambres de Carne de vaca, cerdo o otra opcion en base a pollo. varias guarniciones</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="padding: 100px 0 100px;">
+  <h1 class="text-center display-2">Otros Platos</h1>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/plato2.png" class="d-block w-50 mx-auto" alt="...">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/plato3.png" class="d-block w-50 mx-auto" alt="...">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/plato4.png" class="d-block w-50 mx-auto" alt="...">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<div style="padding: 100px 0 100px;" id="pedido">
+  <form style="padding:-100px 50px;width: 90%;" class="mx-auto">
+    <h1 class="text-center display-2">Realice su pedido</h1>
+    <div class="mb-3">
+      <label for="Nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="Nombre">
+    </div>
+    <div class="mb-3">
+      <label for="Direccion" class="form-label">Dirección</label>
+      <input type="text" class="form-control" id="Direccion">
+    </div>
+    <div class="mb-3">
+      <label for="Email" class="form-label">Correo Electronico</label>
+      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Nunca compartir su correo electrónico con nadie más.</div>
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label for="comment">Pedido:</label>
+      <textarea class="form-control" rows="5" id="pedido" name="text"></textarea>
+    </div>
+    <div id="helppedido" class="form-text">Introduzca todos los detalles de su pedido, por favor.</div>
+
+    <button class="btn btn-success">Enviar
+    </button>
+
+    <button type="reset" class="btn btn-primary">Resetear
+    </button>
+
+  </form>
+</div>
+
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-sm-4">
+        <div>
+          <img src="assets/brand.png" alt="LOGO" width="133" height="100">
+          
+        </div>
+      </div>
+      <div class="col-xl-2 offset-xl-1 col-lg-2 col-sm-4">
+        <div class="">
+          <h5 class="text-danger">RESTAURANTE<a class="navbar-brand" href="#"> </a></h5>
+    <p class="text-success"> Sabemos lo que te gusta.</p>
+    <p class="card-text">Comida como en casa pero sin lavar los platos.</p>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-sm-4">
+        <div>
+          <h4>Menu</h4>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>   
+              <li class="nav-item"><a class="nav-link" href="#trescard">Destacados*</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#carouselExampleControls">Otros Platos</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#pedido">Pedidos</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-sm-4">
+        <div>
+          <h4>Promos</h4>
+          <div>
+            <label for="Newsletter" class="form-label">Suscribase para recibir nuestras Promos</label>
+            <input type="text" class="form-control" Placeholder="ingrese su Email">
+            <button class="btn btn-danger mt-3">Suscribete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="copyright">
+        <p>Developed and maintained by <a href="#" target="_blank">company</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
